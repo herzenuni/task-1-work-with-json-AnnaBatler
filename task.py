@@ -4,27 +4,29 @@
 
 # Импортируйте необходимые библиотеки
 
-# import 
-
-# pprint позволяет в понятном для человека виде форматировать 'сложные' структуры данных 
+import json 
 import pprint
 
-filename = ''
+
+# pprint позволяет в понятном для человека виде форматировать 'сложные' структуры данных 
+
+
+filename = 'data.json'
 
 try:
 
     with open(filename, encoding='utf-8') as data_file:
         
-        data = #использовать модуль json и метод для считывания данных: (data_file)
+        data = json.load(data_file) # использовать модуль json и метод для считывания данных: (data_file)
 
-except ________:
+except FileNotFoundError:
 
     print("Файл не найден! Файл должен называться: {}".format(filename))
     
     status = 'Файл не найден'
 
 
-pprint(data)
+print(data)
 
 # Вывести в форматированном виде поля: 
 
